@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Graduation</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=Closeside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="#grad" data-target="grad">1st Page</a></li>
+            <li><a href="#class" data-target="class">2nd Page</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="logo.png" style="width: 50px; border-radius: 50%;"></a></li>
+            <li class="hideonmob"><a href="#grad">1st Page</a></li>
+            <li class="hideonmob"><a href="#class">2nd Page</a></li>
+            <li class="menu-button" onclick=Showside()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                        viewBox="0 -960 960 960" width="30px" fill="#5f6368">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function Showside() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function Closeside() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        document.querySelectorAll('.sidebar a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                const targetId = event.target.getAttribute('data-target');
+                if (targetId) {
+                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                    Closeside();
+                }
+            });
+        });
+    </script>
+
+    <section id="grad">
+        <h1 class="about">Graduation</h1>
+        <div class="row">
+            <div class="left">
+                <img src="profile.png" alt="">
+            </div>
+            <div class="right">
+                <div class="content">
+                    <p class="first-prgph">
+                        Miano, Chorsel Rose
+                    </p>
+                    <p>
+                        Dear Chorsel,
+                        Congratulations on your graduation from junior high school! This is a significant milestone,
+                        marking the end of one chapter and the beginning of another exciting journey. You've worked
+                        hard, shown great dedication, and now all your efforts have paid off. As you move forward into
+                        high school, embrace the opportunities and challenges that come your way. Keep your curiosity
+                        alive, continue to learn and grow, and never stop striving for your dreams. Remember, this is
+                        just the beginning of a bright and promising future. Celebrate this moment, enjoy your
+                        accomplishments, and get ready for the wonderful adventures that lie ahead. Once again,
+                        congratulations and best wishes for the future!
+                    </p>
+                    <p>
+                        Warm regards,<br>
+                        Renz Ledesma
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="class">
+        <h1 class="row2title">Class<span>Picture</span></h1>
+        <h1 style="color: greenyellow; text-align: center; text-shadow: 1px 4px 8px black;">SEE YOU AGAIN</h1>
+        <div class="row2">
+            <div class="left2">
+                <div class="content2">
+                    <p>
+                       - Congrats and all the best on your graduation day, more great journeys wait for you after your graduation.
+                    </p>
+                    <p>
+                       - Success in life requires hard work, congrats on attaining the best. I celebrate your successful graduation.
+                    </p>
+                </div>
+            </div>
+            <div class="right2">
+            <h1 style="text-align: center;">SEE YOU AGAIN</h1>
+                <img src="classic.jpg" alt="Image 2">
+            </div>
+        </div>
+        <div class="video">
+            <video autoplay controls width="1000px">
+                <source src="seeyouagain.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>if you want me to build a website or edit email and pm me</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: renzledesma76@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <a href="https://web.facebook.com/profile.php?id=61551727907743"><p><i class="fa fa-facebook-f" style="font-size:24px"></i></p></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
